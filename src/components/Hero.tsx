@@ -61,7 +61,7 @@ const Hero = () => {
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-bold text-lg px-8 py-6"
+              className="bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-bold text-lg px-8 py-6"
               onClick={() => scrollToSection("#services")}
             >
               Our Services
