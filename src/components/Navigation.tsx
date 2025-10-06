@@ -82,8 +82,9 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-primary-foreground"
+            className="md:hidden text-primary-foreground z-50 relative"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -91,13 +92,13 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 animate-fade-in">
+          <div className="md:hidden py-4 animate-fade-in bg-primary/95 backdrop-blur-sm">
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <button
                   key={link.name}
                   onClick={() => scrollToSection(link.href)}
-                  className="text-primary-foreground hover:text-brand-gold transition-colors duration-300 font-medium text-left px-4 py-2"
+                  className="text-primary-foreground hover:text-brand-gold transition-colors duration-300 font-medium text-left px-4 py-2 active:bg-primary-foreground/10"
                 >
                   {link.name}
                 </button>
